@@ -9,7 +9,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     s.connect((HOST, PORT))
     print(f"Connected ")
 
-    s.send(bytes.fromhex('02 36 32 33 35 30 36 33 35 7C 30 31 30 7C 7C 31 32 7C 7C 7C 7C 7C 7C 7C 03 0A'))
+    s.send("hello world \n")
 
     print(f"Sent command ")
     data = s.recv(1024)
